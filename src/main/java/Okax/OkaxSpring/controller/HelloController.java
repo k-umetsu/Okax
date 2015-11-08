@@ -4,11 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import Okax.OkaxSpring.definition.OkaxProperty;
+
 @Controller
-public class HelloController {
+public class HelloController implements OkaxProperty {
 	@RequestMapping("/hello")
 	@ResponseBody
 	public String hello() {
-		return "hello.(^_^;)(^_^;)(^_^;)(^_^;)";
+		return PROJECT_NAME;
 	}
 }
